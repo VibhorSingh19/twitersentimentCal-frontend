@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import React,{useState} from 'react'
-import formComponent from './components/form';
 import { useForm } from "react-cool-form";
 import Alert from 'react-bootstrap/Alert'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import Loader from "react-loader-spinner";
 import Axios from 'axios';
 const Field = ({ label, id, error, ...rest }) => (
   <div>
@@ -58,7 +58,8 @@ function App() {
       />
             <input onClick={(val)=>{setKeyword(val)}} type="submit" />
     </form>
-     {data
+     {
+     data
      ?
      <>
       <Alert className="alert" show={show} variant="success">
@@ -82,7 +83,11 @@ function App() {
       {!show && <Button onClick={() => setShow(true)}>Maximise</Button>}
     </>
      :
-     <div></div>
+     keyword
+     ?
+     <Loader className='alert' type="ThreeDots" color="#00BFFF" height={80} width={80} />
+      :
+      <div></div>
     
     }
     </div>

@@ -1,16 +1,16 @@
 body {
   font-family: sans-serif;
-    background-image: url("./asset/bg.jpg"); 
+   background-image: url("./asset/bg.png"); 
  
-  background-size:cover ;
 
+  /* background-color: #5a5f66;
   filter: blur(18px);
   -webkit-filter: blur();
-  
+   */
 }
 
 form {
-  margin: 5rem auto 0;
+  margin: 5rem auto 0; 
   width: 24rem;
 }
 
@@ -50,7 +50,7 @@ div {
   .alert{
     border-width:3px;
     border-color: white;
-   margin-left: 30%;
+   margin-left: 30.5%;
    margin-right: 30%;
    text-align:center;
   }
